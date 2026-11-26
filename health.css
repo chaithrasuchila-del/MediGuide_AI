@@ -1,0 +1,340 @@
+
+/* HEALTH TRACKER PAGE */
+
+.health-body {
+    min-height: 100vh;
+    background: #f7f5ff;
+}
+
+.health-header {
+    background: white;
+    padding: 18px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    box-shadow: 0 2px 12px #00000008;
+}
+
+.health-header h2 {
+    font-size: 22px;
+    color: #29243b;
+}
+
+.health-header h2 span {
+    color: #7956d8;
+}
+
+.health-header nav {
+    display: flex;
+    gap: 22px;
+    flex-wrap: wrap;
+}
+
+.health-header nav a {
+    text-decoration: none;
+    color: #555;
+    font-size: 14px;
+}
+
+.health-header nav a.active {
+    color: #7956d8;
+    font-weight: bold;
+}
+
+.health-user {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.health-user button,
+.history-heading button {
+    background: #7956d8;
+    color: white;
+    border: none;
+    padding: 10px 17px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.health-container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 35px 20px;
+}
+
+.health-heading {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.health-tag {
+    color: #7956d8;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.health-heading h1 {
+    font-size: 34px;
+    margin-bottom: 12px;
+}
+
+.health-heading > p:last-child {
+    color: #777;
+    line-height: 1.7;
+}
+
+/* SUMMARY CARDS */
+
+.health-summary {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+    margin-bottom: 30px;
+}
+
+.summary-card {
+    background: white;
+    padding: 22px 15px;
+    text-align: center;
+    border-radius: 15px;
+    border: 1px solid #eee8ff;
+    box-shadow: 0 5px 20px #00000006;
+}
+
+.summary-icon {
+    font-size: 32px;
+    margin-bottom: 12px;
+}
+
+.summary-card h3 {
+    font-size: 15px;
+    margin-bottom: 12px;
+}
+
+.summary-card p {
+    color: #7956d8;
+    font-size: 23px;
+    font-weight: bold;
+    margin-bottom: 7px;
+}
+
+.summary-card small {
+    color: #888;
+    font-size: 11px;
+}
+
+/* HEALTH FORM */
+
+.health-form-section,
+.history-section {
+    background: white;
+    padding: 28px;
+    border-radius: 16px;
+    border: 1px solid #eee8ff;
+    box-shadow: 0 5px 20px #00000006;
+    margin-bottom: 25px;
+}
+
+.health-form-section h2,
+.history-section h2 {
+    margin-bottom: 10px;
+    font-size: 22px;
+}
+
+.health-form-section > p,
+.history-heading p {
+    color: #888;
+    font-size: 14px;
+    margin-bottom: 22px;
+}
+
+#healthForm {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+.form-group label {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #ddd6ef;
+    border-radius: 9px;
+    outline: none;
+    font-size: 14px;
+}
+
+.form-group input:focus {
+    border-color: #7956d8;
+    box-shadow: 0 0 0 2px #7956d822;
+}
+
+#saveButton {
+    grid-column: 1 / -1;
+    padding: 15px;
+    background: #7956d8;
+    color: white;
+    border: none;
+    border-radius: 9px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#saveButton:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+#statusMessage {
+    grid-column: 1 / -1;
+    font-size: 14px;
+    text-align: center;
+}
+
+.status-success {
+    color: #23834e;
+}
+
+.status-error {
+    color: #c0392b;
+}
+
+/* HEALTH HISTORY */
+
+.history-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.history-heading p {
+    margin-bottom: 0;
+}
+
+.history-list {
+    display: grid;
+    gap: 13px;
+}
+
+.history-card {
+    border: 1px solid #eee8ff;
+    background: #fcfbff;
+    padding: 18px;
+    border-radius: 12px;
+}
+
+.history-card h3 {
+    color: #7956d8;
+    margin-bottom: 13px;
+    font-size: 16px;
+}
+
+.history-values {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.history-values p {
+    font-size: 13px;
+    color: #555;
+    line-height: 1.8;
+}
+
+.delete-record {
+    margin-top: 14px;
+    padding: 8px 13px;
+    background: #fff0f0;
+    color: #c0392b;
+    border: 1px solid #ffd5d5;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.empty-message {
+    color: #888;
+    text-align: center;
+    padding: 25px;
+}
+
+.health-disclaimer {
+    color: #888;
+    text-align: center;
+    font-size: 12px;
+    line-height: 1.7;
+    padding: 20px;
+}
+
+/* MOBILE RESPONSIVE */
+
+@media (max-width: 800px) {
+    .health-summary {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .history-values {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 550px) {
+    .health-header {
+        flex-direction: column;
+    }
+
+    .health-header nav {
+        justify-content: center;
+    }
+
+    .health-container {
+        padding: 22px 12px;
+    }
+
+    .health-heading h1 {
+        font-size: 27px;
+    }
+
+    .health-form-section,
+    .history-section {
+        padding: 18px;
+    }
+
+    #healthForm {
+        grid-template-columns: 1fr;
+    }
+
+    .health-summary {
+        gap: 10px;
+    }
+
+    .summary-card {
+        padding: 18px 8px;
+    }
+
+    .history-heading {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .history-values {
+        grid-template-columns: 1fr 1fr;
+    }
+}

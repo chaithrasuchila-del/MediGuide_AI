@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - MediGuide AI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="auth-body">
+
+<div class="auth-box">
+    <h1>✚ MediGuide <span>AI</span></h1>
+
+    <h2>Create Account</h2>
+    <p>Join MediGuide AI today</p>
+
+    <form id="registerForm">
+
+        <input type="text" id="name"
+               placeholder="Full Name" required>
+
+        <input type="email" id="email"
+               placeholder="Email Address" required>
+
+        <input type="password" id="password"
+               placeholder="Password (minimum 8 characters)"
+               minlength="8" required>
+
+        <input type="password" id="confirmPassword"
+               placeholder="Confirm Password" required>
+
+        <button type="submit">Create Account</button>
+
+        <p id="message"></p>
+
+    </form>
+
+    <p>
+        Already have an account?
+        <a href="login.html">Login</a>
+    </p>
+
+    <a href="index.html">← Back to Home</a>
+</div>
+
+<script src="auth.js"></script>
+
+</body>
+</html>

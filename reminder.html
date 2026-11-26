@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medicine Reminder | MediGuide AI</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="reminder.css">
+</head>
+<body>
+
+    <header class="reminder-header">
+        <h2>💊 MediGuide AI</h2>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="chat.html">AI Chat</a>
+            <a href="health.html">Health Tracker</a>
+            <a href="reminder.html">Medicine Reminder</a>
+        </nav>
+        <button id="logoutButton">Logout</button>
+    </header>
+
+    <main class="reminder-container">
+        <section class="reminder-intro">
+            <h1>Medicine Reminder 💊</h1>
+            <p>Save your medicine schedule and receive reminders at the selected time.</p>
+            <button type="button" id="notificationButton">
+                Enable Notifications
+            </button>
+            <p id="notificationStatus"></p>
+        </section>
+
+        <section class="reminder-card">
+            <h2>Add Medicine Reminder</h2>
+
+            <form id="reminderForm">
+                <label for="medicineName">Medicine Name</label>
+                <input
+                    type="text"
+                    id="medicineName"
+                    placeholder="Enter medicine name"
+                    required
+                >
+
+                <label for="dosage">Dosage / Instructions</label>
+                <input
+                    type="text"
+                    id="dosage"
+                    placeholder="Example: 1 tablet"
+                    required
+                >
+
+                <label for="medicineTime">Reminder Time</label>
+                <input type="time" id="medicineTime" required>
+
+                <label for="medicineNotes">Additional Notes (Optional)</label>
+                <textarea
+                    id="medicineNotes"
+                    placeholder="Example: Take after food"
+                ></textarea>
+
+                <button type="submit" id="saveReminderButton">
+                    Save Reminder
+                </button>
+
+                <p id="message"></p>
+            </form>
+        </section>
+
+        <section class="reminder-card">
+            <h2>My Medicine Schedule</h2>
+            <div id="reminderList">
+                <p>Loading reminders...</p>
+            </div>
+        </section>
+
+        <p class="reminder-disclaimer">
+            Reminder information is entered by the user. Always follow
+            the instructions given by your healthcare professional.
+        </p>
+    </main>
+
+    <script src="reminder.js"></script>
+</body>
+</html>

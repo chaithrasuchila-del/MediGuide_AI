@@ -1,0 +1,131 @@
+.reminder-header {
+    background: #211b35;
+    color: white;
+    padding: 18px 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.reminder-header nav {
+    display: flex;
+    gap: 18px;
+    flex-wrap: wrap;
+}
+
+.reminder-header nav a {
+    color: white;
+    text-decoration: none;
+}
+
+.reminder-header button,
+.reminder-intro button,
+#saveReminderButton {
+    background: #7956d8;
+    color: white;
+    border: none;
+    padding: 11px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.reminder-container {
+    width: 90%;
+    max-width: 850px;
+    margin: 35px auto;
+}
+
+.reminder-intro {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.reminder-intro h1 {
+    color: #7956d8;
+    margin-bottom: 10px;
+}
+
+.reminder-card {
+    background: white;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.07);
+}
+
+.reminder-card h2 {
+    margin-bottom: 20px;
+    color: #29243b;
+}
+
+#reminderForm {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#reminderForm input,
+#reminderForm textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font: inherit;
+    margin-bottom: 10px;
+}
+
+#reminderForm textarea {
+    min-height: 75px;
+    resize: vertical;
+}
+
+.reminder-item {
+    background: #f0ebff;
+    padding: 16px;
+    margin: 12px 0;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+.reminder-item h3 {
+    color: #50349c;
+    margin-bottom: 6px;
+}
+
+.delete-reminder {
+    background: #dc3545;
+    color: white;
+    border: none;
+    padding: 9px 12px;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.reminder-disclaimer {
+    color: #666;
+    font-size: 13px;
+    text-align: center;
+    margin: 20px 0;
+}
+
+#message,
+#notificationStatus {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+@media (max-width: 600px) {
+    .reminder-header {
+        flex-direction: column;
+    }
+
+    .reminder-item {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}

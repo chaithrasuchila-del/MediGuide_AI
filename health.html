@@ -1,0 +1,168 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Tracker | MediGuide AI</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="health.css">
+</head>
+
+<body class="health-body">
+
+<header class="health-header">
+    <h2>✚ MediGuide <span>AI</span></h2>
+
+    <nav>
+        <a href="chat.html">AI Chatbot</a>
+        <a href="health.html" class="active">Health Tracker</a>
+    </nav>
+
+    <div class="health-user">
+        <span id="username">User</span>
+        <button type="button" id="logoutButton">Logout</button>
+    </div>
+</header>
+
+<main class="health-container">
+
+    <section class="health-heading">
+        <p class="health-tag">YOUR WELLNESS COMPANION</p>
+        <h1>Health Tracker 💚</h1>
+        <p>Track your daily wellness habits and monitor your progress.</p>
+    </section>
+
+    <section class="health-summary">
+
+        <div class="summary-card">
+            <div class="summary-icon">💧</div>
+            <h3>Water Intake</h3>
+            <p id="waterSummary">--</p>
+            <small>Latest recorded amount</small>
+        </div>
+
+        <div class="summary-card">
+            <div class="summary-icon">😴</div>
+            <h3>Sleep</h3>
+            <p id="sleepSummary">--</p>
+            <small>Latest recorded hours</small>
+        </div>
+
+        <div class="summary-card">
+            <div class="summary-icon">👣</div>
+            <h3>Steps</h3>
+            <p id="stepsSummary">--</p>
+            <small>Latest recorded steps</small>
+        </div>
+
+        <div class="summary-card">
+            <div class="summary-icon">⚖️</div>
+            <h3>Weight</h3>
+            <p id="weightSummary">--</p>
+            <small>Latest recorded weight</small>
+        </div>
+
+    </section>
+
+    <section class="health-form-section">
+
+        <h2>📝 Add Daily Health Record</h2>
+        <p>Enter your daily health information below.</p>
+
+        <form id="healthForm">
+
+            <div class="form-group">
+                <label for="recordDate">Date</label>
+                <input type="date" id="recordDate" required>
+            </div>
+
+            <div class="form-group">
+                <label for="waterMl">Water Intake (ml)</label>
+                <input
+                    type="number"
+                    id="waterMl"
+                    min="0"
+                    max="10000"
+                    step="1"
+                    placeholder="Example: 2000"
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="sleepHours">Sleep (hours)</label>
+                <input
+                    type="number"
+                    id="sleepHours"
+                    min="0"
+                    max="24"
+                    step="0.5"
+                    placeholder="Example: 8"
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="steps">Daily Steps</label>
+                <input
+                    type="number"
+                    id="steps"
+                    min="0"
+                    max="100000"
+                    step="1"
+                    placeholder="Example: 5000"
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="weightKg">Weight (kg)</label>
+                <input
+                    type="number"
+                    id="weightKg"
+                    min="1"
+                    max="500"
+                    step="0.1"
+                    placeholder="Example: 60"
+                >
+            </div>
+
+            <button type="submit" id="saveButton">
+                Save Health Record
+            </button>
+
+            <p id="statusMessage" role="status"></p>
+
+        </form>
+
+    </section>
+
+    <section class="history-section">
+
+        <div class="history-heading">
+            <div>
+                <h2>📊 Health History</h2>
+                <p>Your previously saved health records.</p>
+            </div>
+
+            <button type="button" id="refreshButton">
+                ↻ Refresh
+            </button>
+        </div>
+
+        <div id="historyList" class="history-list">
+            <p class="empty-message">Loading your health history...</p>
+        </div>
+
+    </section>
+
+    <p class="health-disclaimer">
+        MediGuide AI Health Tracker is for general wellness tracking only.
+        It does not provide medical diagnosis or treatment.
+        Consult a qualified healthcare professional for medical advice.
+    </p>
+
+</main>
+
+<script src="health.js"></script>
+
+</body>
+</html>
